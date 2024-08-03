@@ -33,8 +33,10 @@ public class MyService {
             HashMap<String, String> map = new HashMap();
             map.put("userId", userEntity.getUser_id().toString());
             map.put("msg", "Login Successful");
+            logger.debug("this is for testing purpose");
             return ResponseEntity.ok(map);
         } else {
+            logger.debug("not found");
             return ResponseEntity.notFound().build();
         }
     }
